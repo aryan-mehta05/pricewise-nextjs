@@ -5,7 +5,7 @@ import ProductCard from "@/components/ProductCard";
 import HeroCarousel from "@/components/HeroCarousel";
 
 const Home = async () => {
-  const allProducts = await getAllProducts();
+  // const allProducts = await getAllProducts();
 
   return (
     <>
@@ -42,12 +42,12 @@ const Home = async () => {
         <h2 className="section-text">Trending</h2>
 
         <div className="flex flex-wrap gap-x-8 gap-y-16">
-          {allProducts?.map((product) => (
+          {/* {allProducts?.map((product) => (
             <ProductCard
               key={product._id}
               product={product}
             />
-          ))}
+          ))} */}
         </div>
       </section>
     </>

@@ -2,12 +2,14 @@
 
 import { FormEvent, useState } from "react";
 
+import { scrapeAndStoreProduct } from "@/lib/actions";
+
 const isValidAmazonProduct = (url: string) => {
   try {
     const parsedUrl = new URL(url);
     const hostname = parsedUrl.hostname;
 
-    if (hostname.includes('amazon.com') || hostname.includes('amazon.in') || hostname.includes('amazon.') || hostname.includes('amazon')) return true;
+    if (hostname.includes('amazon.com') || hostname.includes('amazon.in') || hostname.includes('amazon.') || hostname.endsWith('amazon')) return true;
   } catch (error) {
     return false;
   }
