@@ -1,7 +1,11 @@
-const ProductDetails = () => {
+type ProductDetailsProps = {
+  params: { id: string }
+}
+
+const ProductDetails = ({ params: {id} }: ProductDetailsProps) => {
   return (
     <div>
-      ProductDetails
+      {id}
     </div>
   )
 };
