@@ -164,7 +164,7 @@ const ProductDetails = async ({ params: { id } }: ProductDetailsProps) => {
         </div>
       </div>
 
-      {/* <div className="flex flex-col gap-16">
+      <div className="flex flex-col gap-16">
         <div className="flex flex-col gap-5">
           <h3 className="text-2xl text-secondary font-semibold">
             Product Description
@@ -175,18 +175,22 @@ const ProductDetails = async ({ params: { id } }: ProductDetailsProps) => {
           </div>
         </div>
 
-        <button className="btn w-fit mx-auto flex items-center justify-center gap-3 min-w-[200px]">
-          <Image 
-            src="/assets/icons/bag.svg"
-            alt="check"
-            width={22}
-            height={22}
-          />
+        <Link 
+          href={product.url} 
+          target="_blank"
+          className="text-base text-white"
+        >
+          <button className="btn w-fit mx-auto flex items-center justify-center gap-3 min-w-[200px]">
+            <Image 
+              src="/assets/icons/bag.svg"
+              alt="check"
+              width={22}
+              height={22}
+            />
 
-          <Link href="/" className="text-base text-white">
             Buy Now
-          </Link>
-        </button>
+          </button>
+        </Link>
       </div>
 
       {similarProducts && similarProducts?.length > 0 && (
@@ -199,7 +203,7 @@ const ProductDetails = async ({ params: { id } }: ProductDetailsProps) => {
             ))}
           </div>
         </div>
-      )} */}
+      )}
     </div>
   )
 };
